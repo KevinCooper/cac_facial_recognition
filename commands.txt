@@ -1,0 +1,7 @@
+  832  sudo apt-get install pcsc-lit pcsc-ccid perl-pcsc pcsc-tools
+  833  sudo apt-get install pcsc-lite pcsc-ccid perl-pcsc pcsc-tools
+  834  apt-cache search pcsc
+  835  sudo apt-get install libpcsclite1 libccid python3-pyscard libpcsc-perl pcsc-tools
+  836  apt-cache search opensc
+  837  sudo apt-get install opensc opensc-pkcs11
+  838  pcsc_scan
