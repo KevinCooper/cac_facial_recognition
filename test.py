@@ -23,7 +23,7 @@ import binascii
 import getopt
 import sys
 import platform
-import Image
+from PIL import Image
 # from http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/142812
 # Title: Hex dumper
 # Submitter: Sebastien Keim (other recipes)
@@ -255,9 +255,9 @@ for s in slots:
                     #import pdb; pdb.set_trace()
                     #print(PyKCS11.CKA[q])
                     print(format_binary % (PyKCS11.CKA[q], len(a)))
-		    with open("test.jp2", "wb") as f:
+                    with open("test.jp2", "w") as f:
                         import re
-                        test = b"".join([chr(int(x)) for x in re.findall(r"\d+", str(a))])
+                        test = "".join([chr(int(x)) for x in re.findall(r"\d+", str(a))])
                         #import pdb; pdb.set_trace()
                         found = test.find("\xFF\x4F\xFF\x51")
                         if(not found): raise Exception("No JPEG 2000 photo!")

@@ -1,7 +1,5 @@
-  832  sudo apt-get install pcsc-lit pcsc-ccid perl-pcsc pcsc-tools
-  833  sudo apt-get install pcsc-lite pcsc-ccid perl-pcsc pcsc-tools
-  834  apt-cache search pcsc
-  835  sudo apt-get install libpcsclite1 libccid python3-pyscard libpcsc-perl pcsc-tools
-  836  apt-cache search opensc
-  837  sudo apt-get install opensc opensc-pkcs11
-  838  pcsc_scan
+sudo apt-get install libpcsclite1 libccid python3-pyscard libpcsc-perl pcsc-tools
+sudo apt-get install opensc opensc-pkcs11
+sudo apt-get install libopenjp2-7 libopenjp2-7-dev libopenjp3d7 libopenjpip7
+pcsc_scan
+python2 test.py --pin=NULL -c /usr/lib/x86_64-linux-gnu/opensc-pkcs11.so
